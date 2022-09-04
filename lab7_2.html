@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script>
+            function plus()
+            {
+                var x = document.getElementById("a");
+                var y = document.getElementById("b");
+                var z = document.getElementById("c");
+                var op = document.getElementById("operation");
+                switch(op.value)
+                {
+                    case "+": z.value = parseInt(x.value)+parseInt(y.value);break;
+                    case "-": z.value = parseInt(x.value)-parseInt(y.value);break;
+                    case "*": z.value = parseInt(x.value)*parseInt(y.value);break;
+                    case "/": z.value = parseInt(x.value)/parseInt(y.value);break;
+                }               
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+        <input type="text" id="a"> 
+        <select id = "operation">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+         <input type="text" id="b"> = <input type="text" value="" id = "c">
+        <input type="button" id = "compute" onclick="plus()" value="compute">
+        </form>
+    </body>
+</html>
